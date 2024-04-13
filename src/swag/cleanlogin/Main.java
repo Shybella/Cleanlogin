@@ -11,13 +11,13 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class Main extends JavaPlugin implements Listener {
 
-    private int teleportDelay; // Seconds to delay before teleport
+    private int gamemodeDelay; // Seconds to delay before teleport
     private int safeLocationRange; // Range for finding a safe location
 
     @Override
     public void onEnable() {
         this.saveDefaultConfig(); // Ensure config.yml is saved to plugin folder if not existing
-        teleportDelay = this.getConfig().getInt("settings.teleportDelay");
+        gamemodeDelay = this.getConfig().getInt("settings.gamemodeDelay");
         safeLocationRange = this.getConfig().getInt("settings.safeLocationRange");
         getServer().getPluginManager().registerEvents(this, this);
     }
@@ -39,7 +39,7 @@ public class Main extends JavaPlugin implements Listener {
                     event.getPlayer().setGameMode(GameMode.SURVIVAL);
                 }
             }
-        }.runTaskLater(this, 20L * teleportDelay);
+        }.runTaskLater(this, 20L * gamemodeDelay);
     }
 
     public Location findSafeLocation(Location location) {

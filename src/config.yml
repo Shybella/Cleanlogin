@@ -2,15 +2,10 @@
 
 # Settings section
 settings:
-  # Delay in seconds before teleporting the player to a safe location and swapping game modes.
-  # This delay allows for any necessary loading or preparation before the action occurs.
-  # Example: A 5 second delay means there will be 5 seconds wait time after the player joins before they are teleported.
-  teleportDelay: 5
+  # Delay in seconds before changing the players gamemode from spectator to survival.
+  gamemodeDelay: 5
 
   # Range in blocks to search for a safe location around the player's initial join position.
   # The plugin checks in a cube shaped area, extending this range in all directions (up, down, north, south, east, west) from the player's current location.
   # Example: A range of 5 means the plugin checks an 11x11x11 area centered on the player's location.
   safeLocationRange: 5
-
-# Note: If you're adjusting these settings, please ensure the values are appropriate for your server's needs.
-# A higher safeLocationRange might cause slight lag on large servers, while a higher teleportDelay gives more preparation time.
