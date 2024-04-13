@@ -1,0 +1,6 @@
+name: Cleanlogin
+version: 1.0.0
+description: Puts joining players into spectator mode then switches to survival after 10 seconds.
+main: swag.cleanlogin.Main
+api-version: 1.18
+author: Swag
